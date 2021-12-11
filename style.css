@@ -90,6 +90,9 @@ footer {
   display: grid;
   place-items: center;
 }
+.typing {
+  color: darkgreen;
+}
 
 @keyframes shades {
   from {

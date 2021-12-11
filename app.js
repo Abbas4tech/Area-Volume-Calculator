@@ -51,3 +51,10 @@ function volumeCalculate() {
   volumeOutput(resultDescription, currentRadius);
 }
 volCalc.addEventListener("click", volumeCalculate);
+
+let typed = new Typed(".typing", {
+  strings: ["Circle Area", "Cylinder Volume"],
+  typeSpeed: 100,
+  backSpeed: 60,
+  loop: true,
+});
