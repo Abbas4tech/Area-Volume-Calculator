@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+* {
+  margin: o;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ====================GRID SETUP======================== */
+
+main {
+  background-color: rgb(37, 21, 21);
+  color: rgb(49, 12, 12);
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template: repeat(5, 1fr) / 1fr 2fr;
+  gap: 10px;
+  grid-template-areas:
+    "header header"
+    "user-input formula"
+    "user-input area-text"
+    "user-input vol-text"
+    "footer footer  ";
+}
+header {
+  grid-area: header;
+}
+.user-input {
+  grid-area: user-input;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.formula {
+  grid-area: formula;
+}
+.area-text {
+  margin: 0%;
+  grid-area: area-text;
+}
+.vol-text {
+  margin: 0%;
+  grid-area: vol-text;
+}
+footer {
+  grid-area: footer;
+}
+
+/* ====================MULTIPLE SELECTION==================== */
+
+header,
+.area-text,
+.formula,
+.user-input,
+.vol-text,
+footer {
+  background-image: linear-gradient(
+    to bottom right,
+    #edc4b3 10%,
+    #e6b8a2 20%,
+    #deab90 30%,
+    #d69f7e 40%,
+    #cd9777 50%,
+    #c38e70 60%,
+    #b07d62 70%,
+    #9d6b53 80%,
+    #8a5a44 90%,
+    #774936 100%
+  );
+  animation: shades 5s infinite alternate;
+  background-size: 200% 200%;
+  font-weight: 400;
+
+  border-radius: 10px;
+}
+
+.formula,
+.area-text,
+.vol-text {
+  margin: 0%;
+  font-size: 1.5rem;
+  padding: 2rem 1rem;
+}
+
+header,
+footer {
+  display: grid;
+  place-items: center;
+}
+
+@keyframes shades {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 100%;
+  }
+}
+
+/* =====================INPUTS AND BUTTONS====================== */
+
+.user-input input {
+  width: 75%;
+  height: 20%;
+  padding: 2rem;
+  margin: 2rem;
+  margin-top: 0.2rem;
+  display: block;
+
+  color: rgb(44, 25, 25);
+
+  font: inherit;
+  font-size: 3rem;
+  text-align: center;
+
+  border: 2px solid black;
+  box-shadow: 0 2px 8px rgb(128, 43, 43);
+}
+
+.btn {
+  width: 8rem;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem;
+  background-color: #462415;
+  box-shadow: 0 2px 8px rgb(128, 43, 43);
+}
+.btn:hover {
+  transform: translateY(2px);
+  background-color: #614031;
+}
+
+/* ==========MY LABEL========= */
+
+h1 a {
+  text-decoration: none;
+  color: rgb(44, 25, 25);
+}
+h1 a:hover {
+  color: rgb(128, 43, 43);
+}
